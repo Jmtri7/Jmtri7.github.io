@@ -1,4 +1,82 @@
-#main {
-	border-spacing: 30px;
-  	border-collapse: separate;
+element {
+}
+.render table, .render td, .render th {
+    border: 1px solid #000;
+}
+.render table {
+    border-collapse: collapse;
+}
+table {
+    border-top: 0;
+    margin-bottom: 1.5em;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+    z-index: 1;
+}
+table {
+    border-top: 1px solid #eee;
+    margin: 0 0 1.75em;
+        margin-bottom: 1.75em;
+    max-width: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.post-single {
+    font-size: 17px;
+    line-height: 1.75em;
+}
+.post-single {
+    font-size: 17px;
+    line-height: 1.75em;
+}
+.wrapper {
+    text-align: left;
+}
+.wrapper {
+    text-align: left;
+}
+#container {
+    font-size: 12px;
+    line-height: 1.4em;
+    text-align: center;
+}
+#container {
+    font-size: 12px;
+    line-height: 1.4em;
+    text-align: center;
+}
+body {
+    color: #333;
+    font-family: 'Lato','Roboto',Arial,Tahoma,sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5em;
+    text-align: center;
+}
+body {
+    color: #333;
+    font-family: 'Lato','Roboto',Arial,Tahoma,sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5em;
+    text-align: center;
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
 }
