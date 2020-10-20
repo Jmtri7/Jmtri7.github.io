@@ -1,3 +1,13 @@
 * {
-	border: 5px solid red;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+#leftColumn {
+	width: 50%;
+}
+
+#leftColumn {
+	width: 50%;
 }
