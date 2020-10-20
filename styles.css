@@ -1,13 +1,25 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	border: 1px solid black;
+	width: 100%;
+	height: 100%;
 }
 
-#leftColumn {
-	width: 50%;
+#mainBanner {
+	height: 100px;
+	font-size: 50px;
 }
 
-#leftColumn {
-	width: 50%;
+.flex, .flex > div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.coral {
+	background-color: coral;
+}
+
+.aquamarine {
+	background-color: aquamarine;
 }
