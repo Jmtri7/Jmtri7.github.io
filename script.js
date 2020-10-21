@@ -11,7 +11,7 @@ posts = [
     "subject" : "Bows & Arrows",
     "date" : "10/21/2020",
     "message" : "I love it when my friends help me test new features!",
-    "media" : "testing.png",
+    "media" : "testing.PNG",
 },
 
 ]
