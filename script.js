@@ -3,20 +3,15 @@ posts = [
 {
     "subject" : "My First Post",
     "date" : "10/20/2020",
-    "message" : "This is my first post."
+    "message" : "This is my first post.",
+    "media" : "",
 },
 
 {
-    "subject" : "My Middle Post",
-    "date" : "10/20/2020",
-    "message" : "This is my second post."
-},
-
-
-{
-    "subject" : "My Latest Post",
-    "date" : "10/20/2020",
-    "message" : "This is my second post."
+    "subject" : "Bows & Arrows",
+    "date" : "10/21/2020",
+    "message" : "I love it when my friends help me test new features!",
+    "media" : "testing.png",
 },
 
 ]
@@ -25,14 +20,31 @@ postDisplays = document.getElementsByClassName("postDisplay");
 var post = document.createElement('DIV');
 for (i = posts.length - 1; i >= 0; i--) {
 
-  post.innerHTML = 
-  '<div class="post">' 
+  postString = '';
+
+  postString += '<div class="cols post">';
+
+  postString +=
+  '<div class="text">'
   + posts[i].subject 
   + '<br>' 
   + posts[i].date 
-  + '<br>' 
-  + posts[i].message 
-  + '<br><br></div>';
+  + '<br><br>' 
+  + posts[i].message
+  + '<br><br><br>' 
+  + '</div>'
+  ;
+
+  if(posts[i].media != "") {
+    postString += 
+    '<img class="media" src="media/'
+    + posts[i].media 
+    + '">'
+  }
+
+  postString += '<br><br></div>';
+
+  post.innerHTML = postString;
 
 	for (j = 0; j < postDisplays.length; j++) {
   		postDisplays[j].innerHTML += post.innerHTML;
