@@ -2,41 +2,59 @@
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	height: 100%;
 }
 
-#mainBanner {
+html, body {
+  	background-color: aqua;
+  	height: 100%;
+}
+
+/* banners */
+
+.banner {
 	height: 100px;
 	font-size: 50px;
+	background-color: white;
+	text-align: center;
 }
 
-.cols, .cols > .col {
-	flex-direction: row;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+/* post feed */
 
-.rows, .rows > .row {
-	flex-direction: column;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.postDisplay > div {
-	display: block;
-	margin: 1%;
+.postDisplay {
 	padding: 1%;
+}
+
+.post {
+	display: block;
+	padding: 1%;
+	margin-bottom: 1%;
 	width: 96%;
-	height: 100px;
 	background-color: white;
 }
+
+/* colors */
 
 .coral {
 	background-color: coral;
 }
 
 .aquamarine {
-	background-color: aquamarine;
+	background-color: aqua;
+}
+
+/* flexers */
+
+.cols {
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rows {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 }
