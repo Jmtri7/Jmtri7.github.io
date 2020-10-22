@@ -22,13 +22,14 @@ html, body {
 
 .postDisplay {
 	padding: 1%;
+	width: auto;
 }
 
 .post {
 	display: inline-block;
 	padding: 1%;
 	margin-bottom: 1%;
-	width: 96%;
+	width: 98%;
 	background-color: white;
 }
 
