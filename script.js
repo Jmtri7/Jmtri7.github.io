@@ -19,7 +19,7 @@ posts = [
 {
     "subject" : "Project Status Update #4",
     "date" : "10/22/2020",
-    "message" : "COMING SOON",
+    "message" : "Be sure to full-screen the video before pressing play.",
     "img" : "",
     "video" : "update4.mp4",
 },
