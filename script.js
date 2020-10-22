@@ -4,17 +4,29 @@ posts = [
     "subject" : "My First Post",
     "date" : "10/20/2020",
     "message" : "This is my first post.",
-    "media" : "",
+    "img" : "",
+    "video" : "",
 },
 
 {
     "subject" : "Bows & Arrows",
     "date" : "10/21/2020",
     "message" : "I love it when my friends help me test new features!",
-    "media" : "testing.PNG",
+    "img" : "testing.PNG",
+    "video" : "",
+},
+
+{
+    "subject" : "Project Status Update #4",
+    "date" : "10/22/2020",
+    "message" : "COMING SOON",
+    "img" : "",
+    "video" : "update4.mp4",
 },
 
 ]
+
+newline = '<br><br>';
 
 postDisplays = document.getElementsByClassName("postDisplay");
 var post = document.createElement('DIV');
@@ -27,22 +39,30 @@ for (i = posts.length - 1; i >= 0; i--) {
   postString +=
   '<div class="text">'
   + posts[i].subject 
-  + '<br>' 
+  + newline 
   + posts[i].date 
-  + '<br><br>' 
+  + newline
   + posts[i].message
-  + '<br><br><br>' 
+  + newline
   + '</div>'
   ;
 
-  if(posts[i].media != "") {
+  if(posts[i].img != "") {
     postString += 
     '<img class="media" src="media/'
-    + posts[i].media 
+    + posts[i].img 
     + '">'
   }
 
-  postString += '<br><br></div>';
+  if(posts[i].video != "") {
+    postString += '<video class="media" controls>'
+    postString += '<source src="media/' + posts[i].video + '" type="video/mp4">'
+    postString += '</video>'
+  }
+
+  postString += newline;
+
+  postString += '</div>';
 
   post.innerHTML = postString;
 
