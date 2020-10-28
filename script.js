@@ -24,6 +24,14 @@ posts = [
     "video" : "update4.mp4",
 },
 
+{
+    "subject" : "Mini-update",
+    "date" : "10/28/2020",
+    "message" : "Adding some new flowers and trees to the world.",
+    "img" : "plants1.PNG",
+    "video" : "",
+},
+
 ]
 
 newline = '<br><br>';
@@ -70,13 +78,3 @@ for (i = posts.length - 1; i >= 0; i--) {
   		postDisplays[j].innerHTML += post.innerHTML;
 	}
 }
-
-
-
-
-
-
-
-
-
-
