@@ -19,17 +19,28 @@ posts = [
 {
     "subject" : "Project Status Update #4",
     "date" : "10/22/2020",
-    "message" : "Be sure to full-screen the video before pressing play.",
+    "message" : "<b>Be sure to full-screen the video before pressing play.</b>",
     "img" : "",
     "video" : "update4.mp4",
 },
 
 {
-    "subject" : "Mini-update",
+    "subject" : "Mini-update #1",
     "date" : "10/28/2020",
     "message" : "Adding some new flowers and trees to the world.",
     "img" : "plants1.PNG",
     "video" : "",
+},
+
+{
+    "subject" : "Mini-update #2",
+    "date" : "11/5/2020",
+    "message" :
+      "Added portals that allow the player to travel between selectively loaded worlds."
+      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
+    ,
+    "img" : "",
+    "video" : "modularMaps1.mp4",
 },
 
 ]
