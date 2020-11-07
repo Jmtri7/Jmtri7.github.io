@@ -43,6 +43,17 @@ posts = [
     "video" : "modularMaps1.mp4",
 },
 
+{
+    "subject" : "Project Status Update #5",
+    "date" : "11/6/2020",
+    "message" :
+      "In this update I demonstrate the new portal system and new areas that it takes the player to. I travel to a tavern, a scorpion infested desert island, and a haunted crypt."
+      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
+    ,
+    "img" : "",
+    "video" : "update5.mp4",
+},
+
 ]
 
 newline = '<br><br>';
