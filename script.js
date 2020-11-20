@@ -54,6 +54,20 @@ posts = [
     "video" : "update5.mp4",
 },
 
+{
+    "subject" : "Project Status Update #6",
+    "date" : "11/20/2020",
+    "message" :
+      "This update expands the world, with new areas, creatures, music, and sounds."
+      + " It features a short fight with an orc patrol on the way to a mystical forest home to spiders and fireflies."
+      + " Legends say that the forest contains a portal to another world that only appears at midnight."
+      + " The day/night cycle is sped up for demonstration purposes."
+      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
+    ,
+    "img" : "",
+    "video" : "update6.mp4",
+},
+
 ]
 
 newline = '<br><br>';
