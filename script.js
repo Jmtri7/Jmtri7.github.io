@@ -68,6 +68,17 @@ posts = [
     "video" : "update6.mp4",
 },
 
+{
+    "subject" : "Mini-update #3",
+    "date" : "11/26/2020",
+    "message" :
+      "A preview of the magical world beyond ours and the new music there."
+      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
+    ,
+    "img" : "",
+    "video" : "mushroomForest.mp4",
+},
+
 ]
 
 newline = '<br><br>';
