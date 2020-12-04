@@ -79,6 +79,17 @@ posts = [
     "video" : "mushroomForest.mp4",
 },
 
+{
+    "subject" : "Final Demo",
+    "date" : "12/4/2020",
+    "message" :
+      "This video comemorates a semester of work on my senior project. ENJOY!"
+      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
+    ,
+    "img" : "",
+    "video" : "finalDemo.mp4",
+},
+
 ]
 
 newline = '<br><br>';
