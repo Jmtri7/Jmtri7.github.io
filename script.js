@@ -16,6 +16,7 @@ posts = [
 
       + "<br>Animations:<br>"
       + "<a href='https://jmtri7.github.io/Render3D/'>Render 3D</a><br>"
+      + "<a href='https://jmtri7.github.io/VisualMaths/'>Visual Maths</a><br>"
       + "<a href='https://jmtri7.github.io/SpaceStation/'>Space Station</a><br>"
       + "<a href='https://jmtri7.github.io/BouncingBoxes/'>Bouncing Boxes</a><br>"
       + "<a href='https://jmtri7.github.io/ProjectileViewer/'>Projectile Viewer</a><br>"
