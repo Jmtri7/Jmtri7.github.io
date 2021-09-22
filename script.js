@@ -1,93 +1,27 @@
 posts = [
 
 {
-    "subject" : "My First Post",
-    "date" : "10/20/2020",
-    "message" : "This is my first post.",
-    "img" : "",
-    "video" : "",
-},
-
-{
-    "subject" : "Bows & Arrows",
-    "date" : "10/21/2020",
-    "message" : "I love it when my friends help me test new features!",
-    "img" : "testing.PNG",
-    "video" : "",
-},
-
-{
-    "subject" : "Project Status Update #4",
-    "date" : "10/22/2020",
-    "message" : "<b>Be sure to full-screen the video before pressing play.</b>",
-    "img" : "",
-    "video" : "update4.mp4",
-},
-
-{
-    "subject" : "Mini-update #1",
-    "date" : "10/28/2020",
-    "message" : "Adding some new flowers and trees to the world.",
-    "img" : "plants1.PNG",
-    "video" : "",
-},
-
-{
-    "subject" : "Mini-update #2",
-    "date" : "11/5/2020",
+    "subject" : "Hello World!",
+    "date" : "09/21/2021",
     "message" :
-      "Added portals that allow the player to travel between selectively loaded worlds."
-      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
+      "My Github:<br>"
+      + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
+
+      + "<br>Senior Project Blog:<br>"
+      + "<a href='https://jmtri7.github.io/SeniorProject/'>https://jmtri7.github.io/SeniorProject/</a><br>"
+
+      + "<br>Games:<br>"
+      + "<a href='https://jmtri7.github.io/OrcSlayer/'>Orc Slayer</a><br>"
+      + "<a href='https://jmtri7.github.io/TileWorld/'>Tile World</a><br>"
+
+      + "<br>Animations:<br>"
+      + "<a href='https://jmtri7.github.io/Render3D/'>Render 3D</a><br>"
+      + "<a href='https://jmtri7.github.io/SpaceStation/'>Space Station</a><br>"
+      + "<a href='https://jmtri7.github.io/BouncingBoxes/'>Bouncing Boxes</a><br>"
+      + "<a href='https://jmtri7.github.io/ProjectileViewer/'>Projectile Viewer</a><br>"
     ,
     "img" : "",
-    "video" : "modularMaps1.mp4",
-},
-
-{
-    "subject" : "Project Status Update #5",
-    "date" : "11/6/2020",
-    "message" :
-      "In this update I demonstrate the new portal system and new areas that it takes the player to. I travel to a tavern, a scorpion infested desert island, and a haunted crypt."
-      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
-    ,
-    "img" : "",
-    "video" : "update5.mp4",
-},
-
-{
-    "subject" : "Project Status Update #6",
-    "date" : "11/20/2020",
-    "message" :
-      "This update expands the world, with new areas, creatures, music, and sounds."
-      + " It features a short fight with an orc patrol on the way to a mystical forest home to spiders and fireflies."
-      + " Legends say that the forest contains a portal to another world that only appears at midnight."
-      + " The day/night cycle is sped up for demonstration purposes."
-      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
-    ,
-    "img" : "",
-    "video" : "update6.mp4",
-},
-
-{
-    "subject" : "Mini-update #3",
-    "date" : "11/26/2020",
-    "message" :
-      "A preview of the magical world beyond ours and the new music there."
-      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
-    ,
-    "img" : "",
-    "video" : "mushroomForest.mp4",
-},
-
-{
-    "subject" : "Final Demo",
-    "date" : "12/4/2020",
-    "message" :
-      "This video comemorates a semester of work on my senior project. ENJOY!"
-      + "<br><br><b>Be sure to full-screen video before pressing play.</b>"
-    ,
-    "img" : "",
-    "video" : "finalDemo.mp4",
+    "video" : "seniorprojectdemo.mp4",
 },
 
 ]
