@@ -7,21 +7,21 @@ posts = [
       "<br>My Github<br><br>"
       + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
 
-      + "<br><br>Work In Progress<br><br>"
+      + "${newline}Work In Progress${newline}"
       + "<a href='https://jmtri7.github.io/EdgeFighter/'>Edge Fighter</a><br>"
 
-      + "<br><br>Games<br><br>"
+      + "${newline}Games${newline}"
       + "<a href='https://jmtri7.github.io/OrcSlayer/'>Orc Slayer</a><br>"
       + "<a href='https://jmtri7.github.io/TileWorld/'>Tile World</a><br>"
 
-      + "<br><br>Animations<br><br>"
+      + "${newline}Animations${newline}"
       + "<a href='https://jmtri7.github.io/Render3D/'>Render 3D</a><br>"
       + "<a href='https://jmtri7.github.io/VisualMaths/'>Visual Maths</a><br>"
       + "<a href='https://jmtri7.github.io/SpaceStation/'>Space Station</a><br>"
       + "<a href='https://jmtri7.github.io/BouncingBoxes/'>Bouncing Boxes</a><br>"
       + "<a href='https://jmtri7.github.io/ProjectileViewer/'>Projectile Viewer</a><br>"
 
-      + "<br><br>Senior Project Blog<br><br>"
+      + "${newline}Senior Project Blog${newline}"
       + "<a href='https://jmtri7.github.io/SeniorProject/'>https://jmtri7.github.io/SeniorProject/</a>"
     ,
     "img" : null,
@@ -36,7 +36,7 @@ var post = document.createElement('DIV');
 
 for (i = posts.length - 1; i >= 0; i--) {
 
-  postString = '<div class="cols post"><div class="text">${subject}${newline}${date}${newline}${message}${newline}</div>${img}${video}</div>'
+  postString = '<div class="cols post"><div><div class="header">${subject}${newline}${date}</div><br>${message}${newline}</div>${img}${video}</div>'
     .replace("${subject}", posts[i].subject)
     .replace("${date}", posts[i].date)
     .replace("${message}", posts[i].message)
