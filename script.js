@@ -2,7 +2,7 @@ posts = [
 
 {
     "subject" : "Hello World!",
-    "date" : "09/21/2021",
+    "date" : "02/23/2023",
     "message" :
       "<br>My Github<br><br>"
       + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
@@ -42,8 +42,9 @@ for (i = posts.length - 1; i >= 0; i--) {
     .replace("${message}", posts[i].message)
     .replace("${img}", posts[i].img != null ? '<img class="media" src="media/${filename}">'.replace("${filename}", posts[i].img) : "")
     .replace("${video}", posts[i].video != null ? '<video class="media" controls><source src="media/${filename}" type="video/mp4"></video>'.replace("${filename}", posts[i].video) : "")
+    .replaceAll("${newline}", '<br><br>');
 
-  post.innerHTML = postString.replaceAll("${newline}", '<br><br>');
+  post.innerHTML = postString;
 
 	for (j = 0; j < postDisplays.length; j++) {
   		postDisplays[j].innerHTML += post.innerHTML;
