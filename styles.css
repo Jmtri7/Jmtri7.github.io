@@ -26,8 +26,8 @@ html, body {
 
 .postDisplay {
 	margin-top: 10px;
-	width: auto;
 	background-color: rgba(0,0,0,0.0);
+	width: 100%;
 }
 
 .post {
@@ -35,7 +35,9 @@ html, body {
 	background-color: white;
 	margin-bottom: 10px;
 	padding-top:  20px;
-	padding-left: 20px;
+	padding-left:  1%;
+	padding-right:  1%;
+	width: 98%;
 }
 
 .media {
@@ -56,5 +58,4 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 }
