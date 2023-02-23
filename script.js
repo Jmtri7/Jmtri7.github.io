@@ -2,7 +2,7 @@ posts = [
 
 {
     "subject" : "Hello World!",
-    "date" : "02/23/2023",
+    "date" : "09/21/2021",
     "message" :
       "<br>My Github<br><br>"
       + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
@@ -24,51 +24,26 @@ posts = [
       + "<br><br>Senior Project Blog<br><br>"
       + "<a href='https://jmtri7.github.io/SeniorProject/'>https://jmtri7.github.io/SeniorProject/</a>"
     ,
-    "img" : "",
+    "img" : null,
     "video" : "seniorprojectdemo.mp4",
 },
 
 ];
 
-newline = '<br><br>';
-
 postDisplays = document.getElementsByClassName("postDisplay");
+
 var post = document.createElement('DIV');
+
 for (i = posts.length - 1; i >= 0; i--) {
 
-  postString = '';
+  postString = '<div class="cols post"><div class="text">${subject}${newline}${date}${newline}${message}${newline}</div>${img}${video}</div>'
+    .replace("${subject}", posts[i].subject)
+    .replace("${date}", posts[i].date)
+    .replace("${message}", posts[i].message)
+    .replace("${img}", posts[i].img != null ? '<img class="media" src="media/${filename}">'.replace("${filename}", posts[i].img) : "")
+    .replace("${video}", posts[i].video != null ? '<video class="media" controls><source src="media/${filename}" type="video/mp4"></video>'.replace("${filename}", posts[i].video) : "")
 
-  postString += '<div class="cols post">';
-
-  postString +=
-  '<div class="text">'
-  + posts[i].subject 
-  + newline 
-  + posts[i].date 
-  + newline
-  + posts[i].message
-  + newline
-  + '</div>'
-  ;
-
-  if(posts[i].img != "") {
-    postString += 
-    '<img class="media" src="media/'
-    + posts[i].img 
-    + '">'
-  }
-
-  if(posts[i].video != "") {
-    postString += '<video class="media" controls>'
-    postString += '<source src="media/' + posts[i].video + '" type="video/mp4">'
-    postString += '</video>'
-  }
-
-  postString += newline;
-
-  postString += '</div>';
-
-  post.innerHTML = postString;
+  post.innerHTML = postString.replaceAll("${newline}", '<br><br>');
 
 	for (j = 0; j < postDisplays.length; j++) {
   		postDisplays[j].innerHTML += post.innerHTML;
