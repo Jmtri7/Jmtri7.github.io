@@ -2,30 +2,33 @@ posts = [
 
 {
     "subject" : "Hello World!",
-    "date" : "09/21/2021",
+    "date" : "02/23/2023",
     "message" :
-      "My Github:<br>"
+      "<br>My Github<br><br>"
       + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
 
-      + "<br>Senior Project Blog:<br>"
-      + "<a href='https://jmtri7.github.io/SeniorProject/'>https://jmtri7.github.io/SeniorProject/</a><br>"
+      + "<br><br>Work In Progress<br><br>"
+      + "<a href='https://jmtri7.github.io/EdgeFighter/'>Edge Fighter</a><br>"
 
-      + "<br>Games:<br>"
+      + "<br><br>Games<br><br>"
       + "<a href='https://jmtri7.github.io/OrcSlayer/'>Orc Slayer</a><br>"
       + "<a href='https://jmtri7.github.io/TileWorld/'>Tile World</a><br>"
 
-      + "<br>Animations:<br>"
+      + "<br><br>Animations<br><br>"
       + "<a href='https://jmtri7.github.io/Render3D/'>Render 3D</a><br>"
       + "<a href='https://jmtri7.github.io/VisualMaths/'>Visual Maths</a><br>"
       + "<a href='https://jmtri7.github.io/SpaceStation/'>Space Station</a><br>"
       + "<a href='https://jmtri7.github.io/BouncingBoxes/'>Bouncing Boxes</a><br>"
       + "<a href='https://jmtri7.github.io/ProjectileViewer/'>Projectile Viewer</a><br>"
+
+      + "<br><br>Senior Project Blog<br><br>"
+      + "<a href='https://jmtri7.github.io/SeniorProject/'>https://jmtri7.github.io/SeniorProject/</a>"
     ,
     "img" : "",
     "video" : "seniorprojectdemo.mp4",
 },
 
-]
+];
 
 newline = '<br><br>';
 
