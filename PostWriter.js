@@ -41,7 +41,7 @@ posts = [
 
       + "${newline}Work In Progress${newline}"
 
-      + writeLink('${githubURL}JSengine', 'JS Engine')
+      + writeLink('${githubURL}JSengine', 'Quick Canvas')
 
       + "${newline}Games${newline}"
 
