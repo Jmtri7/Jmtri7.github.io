@@ -8,7 +8,7 @@ posts = [
       + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
 
       + "${newline}Work In Progress${newline}"
-      + "<a href='https://jmtri7.github.io/EdgeFighter/'>Edge Fighter</a><br>"
+      + "<a href='https://jmtri7.github.io/JSEngine/'>JS Engine</a><br>"
 
       + "${newline}Games${newline}"
       + "<a href='https://jmtri7.github.io/OrcSlayer/'>Orc Slayer</a><br>"
