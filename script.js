@@ -1,29 +1,42 @@
+
+function writeLink(url, text) {
+  return "<a href='${githubURL}/${path}'>${text}</a><br>"
+    .replace('${path}', url)
+    .replace('${text}', text);
+}
+
 posts = [
 
 {
     "subject" : "Hello World!",
     "date" : "02/23/2023",
     "message" :
+
       "<br>My Github<br><br>"
+
       + "<a href='https://github.com/Jmtri7'>https://github.com/Jmtri7</a><br>"
 
       + "${newline}Work In Progress${newline}"
-      + "<a href='https://jmtri7.github.io/JSEngine/'>JS Engine</a><br>"
+
+      + writeLink('JSengine', 'JS Engine')
 
       + "${newline}Games${newline}"
-      + "<a href='https://jmtri7.github.io/OrcSlayer/'>Orc Slayer</a><br>"
-      + "<a href='https://jmtri7.github.io/TileWorld/'>Tile World</a><br>"
+
+      + writeLink('OrcSlayer', 'Orc Slayer')
+      + writeLink('TileWorld', 'Tile World')
 
       + "${newline}Animations${newline}"
-      + "<a href='https://jmtri7.github.io/Render3D/'>Render 3D</a><br>"
-      + "<a href='https://jmtri7.github.io/VisualMaths/'>Visual Maths</a><br>"
-      + "<a href='https://jmtri7.github.io/SpaceStation/'>Space Station</a><br>"
-      + "<a href='https://jmtri7.github.io/BouncingBoxes/'>Bouncing Boxes</a><br>"
-      + "<a href='https://jmtri7.github.io/ProjectileViewer/'>Projectile Viewer</a><br>"
+
+      + writeLink('Render3D', 'Render 3D')
+      + writeLink('VisualMaths', 'Visual Maths')
+      + writeLink('SpaceStation', 'Space Station')
+      + writeLink('BouncingBoxes', 'Bouncing Boxes')
+      + writeLink('ProjectileViewer', 'Projectile Viewer')
 
       + "${newline}Senior Project Blog${newline}"
-      + "<a href='https://jmtri7.github.io/SeniorProject/'>https://jmtri7.github.io/SeniorProject/</a>"
-    ,
+
+      + writeLink('SeniorProject', '${githubURL}/SeniorProject/'),
+      
     "img" : null,
     "video" : "seniorprojectdemo.mp4",
 },
@@ -42,7 +55,8 @@ for (i = posts.length - 1; i >= 0; i--) {
     .replace("${message}", posts[i].message)
     .replace("${img}", posts[i].img != null ? '<img class="media" src="media/${filename}">'.replace("${filename}", posts[i].img) : "")
     .replace("${video}", posts[i].video != null ? '<video class="media" controls><source src="media/${filename}" type="video/mp4"></video>'.replace("${filename}", posts[i].video) : "")
-    .replaceAll("${newline}", '<br><br>');
+    .replaceAll("${newline}", '<br><br>')
+    .replaceAll("${githubURL}", 'https://jmtri7.github.io');
 
   post.innerHTML = postString;
 
