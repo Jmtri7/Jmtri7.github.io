@@ -9,7 +9,7 @@ posts = [
 
 {
     "subject" : "Hello World!",
-    "date" : "02/23/2023",
+    "date" : "02/24/2023",
     "message" :
 
       "<br>My Github<br><br>"
@@ -36,7 +36,7 @@ posts = [
       + "${newline}Senior Project Blog${newline}"
 
       + writeLink('SeniorProject', '${githubURL}/SeniorProject/'),
-      
+
     "img" : null,
     "video" : "seniorprojectdemo.mp4",
 },
