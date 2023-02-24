@@ -1,6 +1,6 @@
 
 function writeLink(url, text) {
-  return "<a href='${githubURL}/${path}'>${text}</a><br>"
+  return "<a href='${path}'>${text}</a><br>"
     .replace('${path}', url)
     .replace('${text}', text);
 }
@@ -19,7 +19,7 @@ function writePosts() {
       .replace("${img}", posts[i].img != null ? '<img class="media" src="media/${filename}">'.replace("${filename}", posts[i].img) : "")
       .replace("${video}", posts[i].video != null ? '<video class="media" controls><source src="media/${filename}" type="video/mp4"></video>'.replace("${filename}", posts[i].video) : "")
       .replaceAll("${newline}", '<br><br>')
-      .replaceAll("${githubURL}", 'https://jmtri7.github.io');
+      .replaceAll("${githubURL}", 'https://jmtri7.github.io/');
 
     post.innerHTML = postString;
 
