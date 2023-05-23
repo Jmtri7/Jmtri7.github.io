@@ -39,10 +39,6 @@ posts = [
 
       + writeLink('https://github.com/Jmtri7', 'https://github.com/Jmtri7')
 
-      + "${newline}Work In Progress${newline}"
-
-      + writeLink('${githubURL}JSengine', 'Quick Canvas')
-
       + "${newline}Games${newline}"
 
       + writeLink('${githubURL}OrcSlayer', 'Orc Slayer')
