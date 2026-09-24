@@ -85,7 +85,7 @@ main {
 }
 
 .hero {
-  max-width: 640px;
+  max-width: 100%;
 }
 
 .eyebrow {
@@ -111,6 +111,7 @@ main {
   font-size: 17px;
   line-height: 1.7;
   color: var(--text-muted);
+  max-width: 480px;
 }
 
 .work h2,
