@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ripple Field</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/project.css">
+<style>
+	canvas { border: 10px solid green; }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+	<a class="brand" href="/">Jmtri7</a>
+	<nav>
+		<a href="/">All projects</a>
+		<a href="https://github.com/Jmtri7/VisualMaths" target="_blank" rel="noopener">GitHub</a>
+	</nav>
+</header>
+
+<div class="page-title">Ripple Field</div>
+<p class="page-instructions">Drag the slider to change the amplitude of the ripple.</p>
+
+<div class="stage">
+	<canvas id="canvas3" width="500px" height="500px"></canvas>
+	<form onsubmit="return false;">
+		<input id="input1" type="range" min="0" max="300" value="250" class="slider">
+	</form>
+</div>
+
+<script type="text/javascript">
+
+function graph(amp, x, y) {
+	return (amp * Math.sin((x + 50 * y) / 30) * 10000 / (Math.pow(x, 2) + 10000));
+}
+
+function test3() {
+	var c = document.getElementById("canvas3");
+	var ctx = c.getContext("2d");
+
+	var res = 2;
+
+	ctx.scale(1, -1);
+	ctx.translate(c.width / 2, -c.height / 2);
+
+	var input1 = document.getElementById("input1");
+	amp = input1.value;
+	input1.oninput = function() {
+		amp = input1.value;
+	}
+
+	var fun = 1;
+	var t = 0;
+	setInterval(function() {
+		ctx.clearRect(- c.width / 2, - c.height / 2, c.width, c.height);
+		for(i = -c.width / 2; i < c.width; i+= res) {
+			ctx.beginPath();
+			ctx.arc(i, graph(amp, i, t), 2, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fill();
+		}
+		t+= .001 * fun;
+	}, 0.06);
+
+}
+test3()
+
+</script>
+
+<footer class="page-footer">jmtri7.github.io</footer>
+
+</body>
+</html>

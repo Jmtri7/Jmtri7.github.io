@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sine Scatter</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/project.css">
+<style>
+	canvas { border: 10px solid green; background-color: black; }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+	<a class="brand" href="/">Jmtri7</a>
+	<nav>
+		<a href="/">All projects</a>
+		<a href="https://github.com/Jmtri7/VisualMaths" target="_blank" rel="noopener">GitHub</a>
+	</nav>
+</header>
+
+<div class="page-title">Sine Scatter</div>
+<p class="page-instructions">Refresh for a new random pair of waves.</p>
+
+<div class="stage">
+	<canvas id="canvas4" width="500px" height="500px"></canvas>
+</div>
+
+<script type="text/javascript">
+
+function test4() {
+	var c = document.getElementById("canvas4");
+	var ctx = c.getContext("2d");
+
+	var amp1 = 255 * Math.random();
+	var amp2 = 255 * Math.random();
+	var slide1 = 2 * Math.PI * Math.random();
+	var slide2 = 2 * Math.PI * Math.random();
+	var color1 = "rgb(" + Math.floor(255 * Math.random()) + "," + Math.floor(255 * Math.random()) + "," + Math.floor(255 * Math.random()) + ")";
+	var color2 = "rgb(" + Math.floor(255 * Math.random()) + "," + Math.floor(255 * Math.random()) + "," + Math.floor(255 * Math.random()) + ")";;
+	var widthFit = c.width / (2 * Math.PI);
+
+	ctx.fillStyle = color1;
+	for(var i = 0; i <= 2 * Math.PI; i+= 2 * Math.PI / 100) {
+			ctx.fillRect(i * widthFit, 50 * Math.sin(i + slide1) + (c.height / 2), 5, 5);
+	}
+
+	ctx.fillStyle = color2;
+	for(var i = 0; i <= 2 * Math.PI; i+= 2 * Math.PI / 100) {
+			ctx.fillRect(i * widthFit, 100 * Math.sin(i + slide2) + (c.height / 2), 5, 5);
+	}
+
+	setInterval(function(){
+		ctx.clearRect(0, 0, c.width, c.height);
+
+		ctx.fillStyle = color1;
+		slide1 += .003;
+		for(var i = 0; i <= 2 * Math.PI; i+= 2 * Math.PI / 100) {
+				ctx.fillRect(i * 80, amp1 * Math.sin(i + slide1) + (c.height / 2), 5, 5);
+		}
+
+		ctx.fillStyle = color2;
+		slide2 += .015;
+		for(var i = 0; i <= 2 * Math.PI; i+= 2 * Math.PI / 100) {
+				ctx.fillRect(i * 80, amp2 * Math.sin(i + slide2) + (c.height / 2), 5, 5);
+		}
+
+	}, 16);
+}
+test4()
+
+</script>
+
+<footer class="page-footer">jmtri7.github.io</footer>
+
+</body>
+</html>

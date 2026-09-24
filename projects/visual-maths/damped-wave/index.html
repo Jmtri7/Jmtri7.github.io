@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damped Wave</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/project.css">
+<style>
+	canvas { border: 10px solid green; }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+	<a class="brand" href="/">Jmtri7</a>
+	<nav>
+		<a href="/">All projects</a>
+		<a href="https://github.com/Jmtri7/VisualMaths" target="_blank" rel="noopener">GitHub</a>
+	</nav>
+</header>
+
+<div class="page-title">Damped Wave</div>
+<p class="page-instructions">Circles trace a decaying sine wave in real time.</p>
+
+<div class="stage">
+	<canvas id="canvas1" width="500px" height="500px"></canvas>
+</div>
+
+<script type="text/javascript">
+
+function test1() {
+	var c = document.getElementById("canvas1");
+	var ctx = c.getContext("2d");
+
+	var res = 0.3;
+
+	ctx.scale(1, -1);
+	ctx.translate(c.width / 2, -c.height / 2);
+
+	ctx.beginPath();
+	ctx.moveTo(-c.width / 2, 0);
+	ctx.lineTo(c.width / 2, 0);
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(0, -c.height / 2);
+	ctx.lineTo(0, c.height / 2);
+	ctx.stroke();
+
+	function graph(x, y) {
+		return (200 * Math.sin(x / 10 + y) / (1 + .1 * Math.pow(x / 20, 2)));
+	}
+
+	var t = 0;
+
+	setInterval(function() {
+		ctx.clearRect(-c.width / 2, -c.height / 2, c.width, c.height);
+		for(i = -c.width / 2; i < c.width; i+= res) {
+			ctx.beginPath();
+			ctx.arc(i, graph(i, t), 7 * (Math.sin(i) + 2), 0, 2*Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = "rgb(" + Math.round(i / 250 * 127 + 127)  + "," + Math.round(i / 250 * 127 + 127) + "," + Math.round(i / 250 * 127 + 127) + ")";
+			ctx.fill();
+		}
+		t+= .005;
+	}, 0.06);
+}
+test1()
+
+</script>
+
+<footer class="page-footer">jmtri7.github.io</footer>
+
+</body>
+</html>

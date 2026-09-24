@@ -1,6 +1,7 @@
-function renderCard({ title, category, description, url, thumbnail }) {
+function renderCard({ title, category, description, url, thumbnail, external }) {
+  const target = external ? ` target="_blank" rel="noopener"` : "";
   return `
-    <a class="card" href="${url}" target="_blank" rel="noopener">
+    <a class="card" href="${url}"${target}>
       <img class="card-thumb" src="${thumbnail}" alt="${title} preview" loading="lazy">
       <div class="card-body">
         <div class="card-title">${title}</div>

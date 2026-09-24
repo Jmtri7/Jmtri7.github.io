@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Space Station</title>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/project.css">
+	<style>
+		canvas {
+			border: 1px solid var(--border);
+			border-radius: 8px;
+			position: static !important;
+			margin: 0 auto !important;
+			z-index: auto !important;
+		}
+	</style>
+	<script src="Renderer.js"></script>
+	<script src="Entity.js"></script>
+</head>
+<body>
+
+	<header class="page-header">
+		<a class="brand" href="/">Jmtri7</a>
+		<nav>
+			<a href="/">All projects</a>
+			<a href="https://github.com/Jmtri7/SpaceStation" target="_blank" rel="noopener">GitHub</a>
+		</nav>
+	</header>
+
+	<div class="page-title">Space Station</div>
+
+	<script type="text/javascript">
+		var R = new Renderer();
+		var system = new System();
+
+		// SHIPS
+
+		var ship = new Ship("shuttle", 800, 500, 2 * Math.PI * Math.random());
+
+		// ENGINE
+
+		setInterval(function() {
+			R.Clear("black");
+
+			system.Update(10);
+			system.Render(R);
+
+			ship.Render(R);
+		}, 10);
+	</script>
+
+	<footer class="page-footer">jmtri7.github.io</footer>
+
+</body>
+</html>

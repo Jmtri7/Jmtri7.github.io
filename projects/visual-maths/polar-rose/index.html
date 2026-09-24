@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polar Rose</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../css/project.css">
+<style>
+	canvas { border: 10px solid green; }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+	<a class="brand" href="/">Jmtri7</a>
+	<nav>
+		<a href="/">All projects</a>
+		<a href="https://github.com/Jmtri7/VisualMaths" target="_blank" rel="noopener">GitHub</a>
+	</nav>
+</header>
+
+<div class="page-title">Polar Rose</div>
+<p class="page-instructions">Drag the slider to change the amplitude of the rose curve.</p>
+
+<div class="stage">
+	<canvas id="canvas2" width="500px" height="500px"></canvas>
+	<form onsubmit="return false;">
+		<input id="input1" type="range" min="0" max="300" value="250" class="slider">
+	</form>
+</div>
+
+<script type="text/javascript">
+
+function f1(th, t) {
+	return amp * Math.sin(5 * th + t);
+}
+
+function findx(r, th) {
+	return r * Math.cos(th);
+}
+
+function findy(r, th) {
+	return r * Math.sin(th);
+}
+
+function rectline(ctx, x1, y1, x2, y2) {
+	ctx.beginPath();
+	ctx.moveTo(x1, y1);
+	ctx.lineTo(x2, y2);
+	ctx.stroke();
+}
+
+function polline(ctx, r1, th1, r2, th2) {
+	var x1 = findx(r1, th1);
+	var y1 = findy(r1, th1);
+	var x2 = findx(r2, th2);
+	var y2 = findy(r2, th2);
+	rectline(ctx, x1, y1, x2, y2);
+}
+
+function test2() {
+	var c = document.getElementById("canvas2");
+	var ctx = c.getContext("2d");
+	ctx.scale(1, -1);
+	ctx.translate(c.width / 2, -c.height / 2);
+
+	var res = 50;
+
+	var input1 = document.getElementById("input1");
+	amp = input1.value;
+	input1.oninput = function() {
+		amp = input1.value;
+	}
+
+	var t = 0;
+	setInterval(function() {
+		ctx.clearRect(- c.width / 2, - c.height / 2, c.width, c.height);
+		for(th1 = -100 * Math.PI; th1 < 100 * Math.PI; th1 += Math.PI / res) {
+			polline(ctx, f1(th1, t), th1, f1(th1 + Math.PI / res, t), th1 + Math.PI / res);
+		}
+		t += 0.01;
+	}, 10);
+
+}
+test2()
+
+</script>
+
+<footer class="page-footer">jmtri7.github.io</footer>
+
+</body>
+</html>
