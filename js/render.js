@@ -1,8 +1,11 @@
-function renderCard({ title, category, description, url, thumbnail, external }) {
+function renderCard({ title, category, description, url, thumbnail, external, placeholder }) {
   const target = external ? ` target="_blank" rel="noopener"` : "";
+  const thumb = thumbnail
+    ? `<img class="card-thumb" src="${thumbnail}" alt="${title} preview" loading="lazy">`
+    : `<div class="card-thumb card-thumb-placeholder">${placeholder || title}</div>`;
   return `
     <a class="card" href="${url}"${target}>
-      <img class="card-thumb" src="${thumbnail}" alt="${title} preview" loading="lazy">
+      ${thumb}
       <div class="card-body">
         <div class="card-title">${title}</div>
         <div class="card-category">${category}</div>

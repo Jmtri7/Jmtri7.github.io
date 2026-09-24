@@ -1,5 +1,12 @@
 const projects = [
   {
+    title: "Meat Craft",
+    category: "In development",
+    description: "A first-person primitive survival game with no inventory — built from scratch in Rust on a custom engine.",
+    url: "projects/meat-craft/",
+    placeholder: "Meat Craft",
+  },
+  {
     title: "Senior Project",
     category: "Capstone blog",
     description: "A modular, procedurally-loaded game world, documented update by update.",

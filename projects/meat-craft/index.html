@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meat Craft</title>
+<meta name="description" content="Meat Craft — a primitive survival game built from scratch in Rust.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/project.css">
+<style>
+  body { align-items: stretch; justify-content: flex-start; padding: 96px 0 64px; }
+  main {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+  }
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    margin: 0 0 12px;
+  }
+  .lede {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 20px;
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    margin: 0 0 16px;
+  }
+  section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0 0 12px;
+  }
+  section p:last-child { margin-bottom: 0; }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .shot-placeholder {
+    aspect-ratio: 16 / 10;
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--text-faint);
+    text-align: center;
+    padding: 16px;
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <a class="brand" href="/">Jmtri7</a>
+  <nav>
+    <a href="/">All projects</a>
+  </nav>
+</header>
+
+<main>
+  <div>
+    <div class="status-tag"><span class="status-dot"></span>In development</div>
+    <h1>Meat Craft</h1>
+    <p class="lede">A first-person survival game about starting with nothing but two hands — built from scratch in Rust, on a custom engine written for it.</p>
+  </div>
+
+  <section>
+    <h2>What it's about</h2>
+    <p>There's no inventory screen, no crafting menu, no item list. What you're holding is what you have: one thing in each hand, picked up off the ground. A stick and a spindle can start a fire if you work the ember up before it cools. A bow and an arrow can bring down a deer or a guinea fowl if the shot lands.</p>
+    <p>The world is procedurally generated and streams in around you as you walk — terrain, grass, water, and sky all built and rendered live rather than pre-baked. Before you step into a world, a preview screen lets you see and tune the noise maps that will shape its oceans and mountains, so you're choosing a place rather than just a seed number.</p>
+  </section>
+
+  <section>
+    <h2>How it's built</h2>
+    <p>The whole thing is three Rust crates: a small rendering engine (<code>engine</code>) built directly on wgpu, the game itself (<code>game</code>), and a world-generation editor (<code>editor</code>) for previewing and tuning terrain before it's played. No off-the-shelf game engine — camera, collision, shadows, water, grass, and the sky all hand-written against the GPU.</p>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <p>Coming soon — the game is still early and mid-development.</p>
+    <div class="gallery">
+      <div class="shot-placeholder">Screenshot coming soon</div>
+      <div class="shot-placeholder">Screenshot coming soon</div>
+      <div class="shot-placeholder">Screenshot coming soon</div>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer" style="position: static; margin-top: 40px;">jmtri7.github.io</footer>
+
+</body>
+</html>
