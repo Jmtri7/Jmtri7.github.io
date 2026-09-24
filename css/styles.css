@@ -88,16 +88,6 @@ main {
   max-width: 100%;
 }
 
-.eyebrow {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 16px;
-}
-
 .hero h1 {
   font-family: 'Fraunces', serif;
   font-weight: 900;
