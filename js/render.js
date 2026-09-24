@@ -1,9 +1,11 @@
-function renderCard({ title, category, url, accent }) {
+function renderCard({ title, category, url, thumbnail }) {
   return `
     <a class="card" href="${url}" target="_blank" rel="noopener">
-      <div class="card-swatch" style="background: ${accent}"></div>
-      <div class="card-title">${title}</div>
-      <div class="card-category">${category}</div>
+      <img class="card-thumb" src="${thumbnail}" alt="${title} preview" loading="lazy">
+      <div class="card-body">
+        <div class="card-title">${title}</div>
+        <div class="card-category">${category}</div>
+      </div>
     </a>
   `;
 }
