@@ -2,7 +2,7 @@ const projects = [
   {
     title: "Meat Craft",
     category: "In development",
-    description: "A first-person primitive survival game with no inventory — built from scratch in Rust on a custom engine.",
+    description: "A first-person survival game — gather, craft, and hunt across a climate-simulated open world. Built from scratch in Rust.",
     url: "projects/meat-craft/",
     thumbnail: "assets/thumbnails/meat-craft.png",
   },

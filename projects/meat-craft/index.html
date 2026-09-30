@@ -88,6 +88,28 @@
     border: 1px solid var(--border);
     display: block;
   }
+  .itch-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .itch-link:hover { color: var(--bg); opacity: 0.9; }
+  ul.feature-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+  ul.feature-list li { margin-bottom: 4px; }
 </style>
 </head>
 <body>
@@ -103,18 +125,20 @@
   <div>
     <div class="status-tag"><span class="status-dot"></span>In development</div>
     <h1>Meat Craft</h1>
-    <p class="lede">A first-person survival game about starting with nothing but two hands — built from scratch in Rust, on a custom engine written for it.</p>
+    <p class="lede">A first-person survival game about starting with nothing but two hands, a stretch of wild land, and whatever's willing to be hunted or foraged — built from scratch in Rust, on a custom engine written for it.</p>
+    <a class="itch-link" href="https://terrorofthetides.itch.io/tap-out" target="_blank" rel="noopener">Play the latest build on itch.io ↗</a>
   </div>
 
   <section>
     <h2>What it's about</h2>
-    <p>There's no inventory screen, no crafting menu, no item list. What you're holding is what you have: one thing in each hand, picked up off the ground. A stick and a spindle can start a fire if you work the ember up before it cools. A bow and an arrow can bring down a deer or a guinea fowl if the shot lands.</p>
-    <p>The world is procedurally generated and streams in around you as you walk — terrain, grass, water, and sky all built and rendered live rather than pre-baked. Before you step into a world, a preview screen lets you see and tune the noise maps that will shape its oceans and mountains, so you're choosing a place rather than just a seed number.</p>
+    <p>You gather sticks, stones, and fiber off the ground, craft a bow, start a fire with a hand drill, and hunt or forage to keep your health and hunger up. A fiber backpack — ten slots, always worn — holds everything you pick up; a craft menu (Tab) turns raw materials into tools, and a basket you build yourself lets you carry more in bulk.</p>
+    <p>The world runs on a continuous climate simulation rather than fixed biomes — erosion, soil, moisture, and temperature all drive what grows where, so cacti and prickly pears turn up on warm dry ground, mushrooms on cold ground, and berries in between. Before stepping into a world, a preview screen lets you see and tune the noise maps that will shape its oceans and mountains.</p>
+    <p>Wildlife spans a real ecosystem rather than a couple of test animals: deer, boar, bovine, bear, wolf, wolverine, hyena, elephant, giraffe, rhino, hippo, mountain goat, ostrich, eagle, grouse, guinea fowl, squirrel, mouse, lizard, snake, fish, and shark, each with their own movement and behavior.</p>
   </section>
 
   <section>
     <h2>How it's built</h2>
-    <p>The whole thing is three Rust crates: a small rendering engine (<code>engine</code>) built directly on wgpu, the game itself (<code>game</code>), and a world-generation editor (<code>editor</code>) for previewing and tuning terrain before it's played. No off-the-shelf game engine — camera, collision, shadows, water, grass, and the sky all hand-written against the GPU.</p>
+    <p>The whole thing is three Rust crates: a small rendering engine (<code>engine</code>) built directly on wgpu, the game itself (<code>game</code>), and a world-generation editor (<code>editor</code>) for previewing and tuning terrain before it's played. No off-the-shelf game engine — camera, collision, shadows, water, grass, sky, and audio all hand-written against the GPU.</p>
   </section>
 
   <section>
