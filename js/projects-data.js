@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: "Meat Craft",
+    title: "Tap Out",
     category: "In development",
     description: "A first-person survival game — gather, craft, and hunt across a climate-simulated open world. Built from scratch in Rust.",
     url: "projects/meat-craft/",

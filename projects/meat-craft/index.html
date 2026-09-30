@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meat Craft</title>
-<meta name="description" content="Meat Craft — a primitive survival game built from scratch in Rust.">
+<title>Tap Out</title>
+<meta name="description" content="Tap Out — a primitive survival game built from scratch in Rust.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/project.css">
 <style>
@@ -88,6 +88,41 @@
     border: 1px solid var(--border);
     display: block;
   }
+  .gallery img { cursor: zoom-in; }
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    cursor: default;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .lightbox-close:hover { background: rgba(255, 255, 255, 0.3); }
   .itch-link {
     display: inline-flex;
     align-items: center;
@@ -124,7 +159,7 @@
 <main>
   <div>
     <div class="status-tag"><span class="status-dot"></span>In development</div>
-    <h1>Meat Craft</h1>
+    <h1>Tap Out</h1>
     <p class="lede">A first-person survival game about starting with nothing but two hands, a stretch of wild land, and whatever's willing to be hunted or foraged — built from scratch in Rust, on a custom engine written for it.</p>
     <a class="itch-link" href="https://terrorofthetides.itch.io/tap-out" target="_blank" rel="noopener">Play the latest build on itch.io ↗</a>
   </div>
@@ -145,14 +180,40 @@
     <h2>Screenshots</h2>
     <p>More coming as the game develops.</p>
     <div class="gallery">
-      <img src="../../assets/thumbnails/meat-craft.png" alt="A mountain valley in Meat Craft, procedurally generated terrain with a river running through green hills below jagged peaks.">
-      <img src="../../assets/thumbnails/meat-craft-2.png" alt="Drawing a bow at an elephant in a palm grove in Meat Craft, with the backpack, health, and hunger HUD visible.">
+      <img src="../../assets/thumbnails/meat-craft.png" alt="A mountain valley in Tap Out, procedurally generated terrain with a river running through green hills below jagged peaks.">
+      <img src="../../assets/thumbnails/meat-craft-2.png" alt="Drawing a bow at an elephant in a palm grove in Tap Out, with the backpack, health, and hunger HUD visible.">
       <div class="shot-placeholder">Screenshot coming soon</div>
     </div>
   </section>
 </main>
 
 <footer class="page-footer" style="position: static; margin-top: 40px;">jmtri7.github.io</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" alt="">
+</div>
+
+<script>
+  (function () {
+    var box = document.getElementById('lightbox');
+    var big = document.getElementById('lightbox-img');
+    function close() { box.classList.remove('open'); }
+    document.querySelectorAll('.gallery img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        big.src = img.src;
+        big.alt = img.alt;
+        box.classList.add('open');
+      });
+    });
+    box.addEventListener('click', function (e) {
+      if (e.target !== big) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+  })();
+</script>
 
 </body>
 </html>
