@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tap Out</title>
-<meta name="description" content="Tap Out — a primitive survival game built from scratch in Rust.">
+<meta name="description" content="Tap Out — a cozy, hands-on survival game about fishing, cooking, and camping, built from scratch in Rust.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/project.css">
 <style>
@@ -177,29 +177,51 @@
   <div>
     <div class="status-tag"><span class="status-dot"></span>In development</div>
     <h1>Tap Out</h1>
-    <p class="lede">A first-person survival game about starting with nothing but two hands, a stretch of wild land, and whatever's willing to be hunted or foraged — built from scratch in Rust, on a custom engine written for it.</p>
+    <p class="lede">A quiet, hands-on survival game about making a small life in the wild. Gather sticks and fiber, light a fire, cook what you catch, and tuck in under a lean-to while the rain rolls through. No clock, no combat pressure — just a gentle loop of looking after yourself.</p>
     <a class="itch-link" href="https://terrorofthetides.itch.io/tap-out" target="_blank" rel="noopener">Play the latest build on itch.io ↗</a>
   </div>
 
   <section>
-    <h2>What it's about</h2>
-    <p>You gather sticks, stones, and fiber off the ground, craft a bow, start a fire with a hand drill, and hunt or forage to keep your health and hunger up. A fiber backpack — ten slots, always worn — holds everything you pick up; a craft menu (Tab) turns raw materials into tools, and a basket you build yourself lets you carry more in bulk.</p>
-    <p>The world runs on a continuous climate simulation rather than fixed biomes — erosion, soil, moisture, and temperature all drive what grows where, so cacti and prickly pears turn up on warm dry ground, mushrooms on cold ground, and berries in between. Before stepping into a world, a preview screen lets you see and tune the noise maps that will shape its oceans and mountains.</p>
-    <p>Wildlife spans a real ecosystem rather than a couple of test animals: deer, boar, bovine, bear, wolf, wolverine, hyena, elephant, giraffe, rhino, hippo, mountain goat, ostrich, eagle, grouse, guinea fowl, squirrel, mouse, lizard, snake, fish, and shark, each with their own movement and behavior.</p>
+    <h2>A slow, cozy loop</h2>
+    <p>You start with nothing but two hands. Pick up sticks, stones, and fiber from the ground, press Tab, and craft your first tools. Everything you own is either in your hands or in a worn backpack, so you're always aware of what you're carrying.</p>
+    <p>Then the small pleasures: spin a hand drill until a fire catches, hold a skewer of meat over the flames until it turns golden (leave it too long and it burns), and sit warm by the glow after dark. Keep an eye on four little gauges — hunger, health, thirst, and how warm or cold you feel — and the game stays comfortable as long as you do.</p>
+  </section>
+
+  <section>
+    <h2>Things to do</h2>
+    <ul class="feature-list">
+      <li><strong>Fish.</strong> Craft a rod, bait the hook, draw back and cast. Real fish swim up to the bobber, nibble, and either swipe the bait or bite — reel in at the right moment.</li>
+      <li><strong>Hunt and cook.</strong> Make a bow or spear, track animals through the trees, and bring home meat to roast on a stick. Food spoils, so fresh meals matter.</li>
+      <li><strong>Forage.</strong> Berries on temperate ground, mushrooms in the cold, prickly pears in the heat. Picked plants grow their fruit back after a couple of days.</li>
+      <li><strong>Chop and smash.</strong> A stone axe fells even the biggest trees, and a pick axe breaks boulders into stones — the tools wear out, so make a few.</li>
+      <li><strong>Build a camp.</strong> Lash together a lean-to for shade and shelter from the rain, plant flags to mark where you've been, and set down a basket for extra storage.</li>
+      <li><strong>Make a pot.</strong> Dig clay, shape a pot, and fill it with water to drink. Fire it hard and it becomes a lasting waterskin; leave a soft one in the rain and it melts back to clay.</li>
+      <li><strong>Take to the water.</strong> Lash ten sticks and ten fiber into a raft, grab an oar, and drift out across the lake.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>A world with weather</h2>
+    <p>The land isn't split into fixed biomes. Erosion, soil, moisture, and temperature all shape what grows where, so you'll find lush forests, dry scrub, cold slopes, and everything between. Rain drifts in over damp country and falls as snow where it's cold; tree canopies and lean-to roofs keep you dry, and standing in a downpour will chill you.</p>
+    <p>Deer, boar, bears, wolves, elephants, giraffes, eagles, fish, and many more share the world, each moving in its own way. Wind, birdsong, and footsteps fill in the rest — it's meant to be a place you're happy to linger in.</p>
   </section>
 
   <section>
     <h2>How it's built</h2>
-    <p>The whole thing is three Rust crates: a small rendering engine (<code>engine</code>) built directly on wgpu, the game itself (<code>game</code>), and a world-generation editor (<code>editor</code>) for previewing and tuning terrain before it's played. No off-the-shelf game engine — camera, collision, shadows, water, grass, sky, and audio all hand-written against the GPU.</p>
+    <p>Tap Out is written in Rust on a custom wgpu engine: camera, collision, shadows, water, grass, sky, weather, and audio are all hand-written. There are no image textures — every bark, leaf, and fur pattern is generated procedurally in the shader.</p>
   </section>
 
   <section>
     <h2>Screenshots</h2>
-    <p>More coming as the game develops.</p>
+    <p>Click any screenshot to expand it.</p>
     <div class="gallery">
       <img src="../../assets/thumbnails/meat-craft.png" alt="A mountain valley in Tap Out, procedurally generated terrain with a river running through green hills below jagged peaks.">
       <img src="../../assets/thumbnails/meat-craft-2.png" alt="Drawing a bow at an elephant in a palm grove in Tap Out, with the backpack, health, and hunger HUD visible.">
-      <div class="shot-placeholder">Screenshot coming soon</div>
+      <img src="../../assets/thumbnails/meat-craft-3.webp" alt="Fishing from a wooden raft on a calm lake in Tap Out, with the bobber floating out on the water and forest along the far shore.">
+      <img src="../../assets/thumbnails/meat-craft-4.webp" alt="Drinking fresh water from a handmade clay pot in Tap Out, on a rainy shore among cypress and mangrove trees where fresh and salt water meet.">
+      <img src="../../assets/thumbnails/meat-craft-5.webp" alt="Sneaking through tall grass in a rainy forest with a spear in hand, closing in on deer in Tap Out.">
+      <img src="../../assets/thumbnails/meat-craft-6.webp" alt="Felling a large tree with a stone axe on a dark, rainy night in Tap Out, the cut trunk toppling beside the stump.">
+      <img src="../../assets/thumbnails/meat-craft-7.webp" alt="Cooking meat over a fire under a lean-to shelter on a rainy night in Tap Out, with the on-screen prompt that the meat is cooked.">
     </div>
   </section>
 </main>
